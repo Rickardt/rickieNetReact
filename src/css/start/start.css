@@ -1,0 +1,17 @@
+.start-container{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.card-box{
+width:700px;
+height: 450px;
+background-color: black;
+
+}
+.button{
+  width: 100px;
+  height: 40px;
+  background-color: green;
+}

@@ -1,21 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
+
+import Start from './pages/start'
+import Clothes from './pages/clothes'
+
+module.exports = function(source) {
+  return source.replace(/^#! .*\n/, "");
+};
 
 class App extends Component {
+
+  constructor(props) {
+  super(props)
+}
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <Router>
+        <div className="outer-container">
+          <Route exact path="/" render={(props) => (
+            <Start {...props}/>
+          )}/>
+
+          <Route path="/clothes" render= {(props) => (
+            <Clothes   {...props}/>
+          )}/>
+
+        </div>
+      </Router>
+      );
+    }
   }
-}
 
 export default App;
