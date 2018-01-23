@@ -7,9 +7,7 @@ import {
 import Start from './pages/start'
 import Clothes from './pages/clothes'
 
-module.exports = function(source) {
-  return source.replace(/^#! .*\n/, "");
-};
+
 
 class App extends Component {
 
