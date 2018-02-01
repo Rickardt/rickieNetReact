@@ -5,8 +5,8 @@ import {
 } from 'react-router-dom'
 
 import Start from './pages/start'
-import Clothes from './pages/clothes'
-
+//Clothes page requires OpenCV, it's a pain in the ass to install
+// import Clothes from './pages/clothes'
 
 
 class App extends Component {
@@ -15,6 +15,9 @@ class App extends Component {
   super(props)
 }
 
+          // <Route path="/clothes" render= {(props) => (
+          //   <Clothes   {...props}/>
+          // )}/>
   render() {
     return (
       <Router>
@@ -23,9 +26,6 @@ class App extends Component {
             <Start {...props}/>
           )}/>
 
-          <Route path="/clothes" render= {(props) => (
-            <Clothes   {...props}/>
-          )}/>
 
         </div>
       </Router>

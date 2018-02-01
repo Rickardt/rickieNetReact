@@ -2,6 +2,8 @@ import React from 'react'
 import '../css/start/start.css'
 import cv from 'opencv'
 
+//THIS PAGE IS NOT WORKING DUE TO OPENCV
+
 class Clothes extends React.Component{
 
   constructor(props){
